@@ -40,4 +40,10 @@ RUN   curl https://grafanarel.s3.amazonaws.com/builds/grafana_2.5.0_amd64.deb > 
 
 ADD   statsd/config.js /opt/statsd/config.js
 
-EXPOSE 3000
+ADD   docker-entrypoint.sh /
+
+EXPOSE 3000 8086
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["*"]

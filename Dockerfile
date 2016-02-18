@@ -19,9 +19,9 @@ RUN   apt-add-repository ppa:chris-lea/node.js        && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # InfluxDB
-RUN   curl https://s3.amazonaws.com/influxdb/influxdb_0.9.5.1_amd64.deb > /tmp/influxdb_0.9.5.1_amd64.deb &&\
-      dpkg -i /tmp/influxdb_0.9.5.1_amd64.deb         && \
-      rm /tmp/influxdb_0.9.5.1_amd64.deb
+RUN   curl https://s3.amazonaws.com/influxdb/influxdb_0.10.1-1_amd64.deb > /tmp/influxdb_0.10.1-1_amd64.deb &&\
+      dpkg -i /tmp/influxdb_0.10.1-1_amd64.deb        && \
+      rm /tmp/influxdb_0.10.1-1_amd64.deb
 
 # StatsD
 RUN   cd /opt                                         && \
@@ -30,9 +30,9 @@ RUN   cd /opt                                         && \
       npm install statsd-influxdb-backend
 
 # Grafana
-RUN   curl https://grafanarel.s3.amazonaws.com/builds/grafana_2.5.0_amd64.deb > /tmp/grafana_2.5.0_amd64.deb && \
-      dpkg -i /tmp/grafana_2.5.0_amd64.deb            && \
-      rm /tmp/grafana_2.5.0_amd64.deb
+RUN   curl https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb > /tmp/grafana_2.6.0_amd64.deb && \
+      dpkg -i /tmp/grafana_2.6.0_amd64.deb            && \
+      rm /tmp/grafana_2.6.0_amd64.deb
 
 ###################
 # Start container #

@@ -44,6 +44,4 @@ ADD   docker-entrypoint.sh /
 
 EXPOSE 3000 8086
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-
 CMD ["*"]

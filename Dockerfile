@@ -42,7 +42,7 @@ ADD   statsd/config.js /opt/statsd/config.js
 
 ADD   docker-entrypoint.sh /
 
-EXPOSE 3000 8086
+EXPOSE 3000 8086 8125/udp
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
